@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/educator",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "moecsrep-educator-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/educator-service/educator"
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/educator/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "moecsrep-educator-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/educator-service/educator/{id}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/education/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "moecsrep-educator-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/educator-service/education/{id}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/certificate/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "moecsrep-certificate-microservice.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/certificate-service/certificate/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://moecsrep-api-gateway.azurewebsites.net"
+    //"BaseUrl": "https://localhost:5001"
+  }
+}
